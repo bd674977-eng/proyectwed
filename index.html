@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molino del Sol</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {font-family: Arial; margin:0; background:#fafafa;}
+
+    nav {
+      background:#8e5a2b;
+      color:white;
+      padding:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    nav a {color:white; margin:0 10px; text-decoration:none;}
+
+    .hero {
+      height:80vh;
+      background:url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec') center/cover;
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero h1 {font-size:50px;}
+
+    .hero button {
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      border-radius:30px;
+      background:#c68642;
+      color:white;
+      cursor:pointer;
+    }
+
+    section {padding:60px 10%;}
+
+    .flex {
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      justify-content:center;
+    }
+
+    .box {
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      width:250px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .box:hover {transform:scale(1.05);}    
+
+    .price {font-size:25px; color:#8e5a2b;}
+
+    footer {
+      background:#8e5a2b;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .whatsapp {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>🌾 Molino del Sol</h2>
+  <div>
+    <a href="#productos">Productos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#molinos">Molinos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Harina de Calidad Superior</h1>
+  <p>Para panaderías, negocios y hogares</p>
+  <button onclick="scrollToSection()">Ver más</button>
+</div>
+
+<section id="productos">
+  <h2>Productos</h2>
+  <div class="flex">
+    <div class="box">Harina panadería</div>
+    <div class="box">Harina repostería</div>
+    <div class="box">Harina doméstica</div>
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <div class="flex">
+    <div class="box">Distribución a negocios</div>
+    <div class="box">Venta mayorista</div>
+    <div class="box">Asesoría a panaderías</div>
+  </div>
+</section>
+
+<section id="molinos">
+  <h2>Nuestros Molinos</h2>
+  <div class="flex">
+    <div class="box">Molinos industriales modernos</div>
+    <div class="box">Procesos eficientes</div>
+    <div class="box">Producción de alta calidad</div>
+  </div>
+</section>
+
+<section>
+  <h2>Precios</h2>
+  <div class="flex">
+    <div class="box">
+      <h3>1 kg</h3>
+      <p class="price">RD$90</p>
+      <button onclick="comprar('1kg')">Comprar</button>
+    </div>
+    <div class="box">
+      <h3>5 kg</h3>
+      <p class="price">RD$400</p>
+      <button onclick="comprar('5kg')">Comprar</button>
+    </div>
+    <div class="box">
+      <h3>25 kg</h3>
+      <p class="price">RD$2000</p>
+      <button onclick="comprar('25kg')">Comprar</button>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="flex">
+    <div class="box">📞 +1 809-000-0000</div>
+    <div class="box">✉ contacto@molinodelsol.com</div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Molino del Sol</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/18090000000" target="_blank">
+  💬
+</a>
+
+<script>
+function comprar(tipo){
+  window.open("https://wa.me/18090000000?text=Quiero%20comprar%20harina%20de%20"+tipo);
+}
+
+function scrollToSection(){
+  document.getElementById('productos').scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
